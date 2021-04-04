@@ -2,7 +2,7 @@
 " Language:	umka
 " Maintainer: Marek Maskarinec	
 " Last Change:	2021 Feb 11
-" Mosly made by: David Barnett (https://github.com/google/vim-ft-go
+" Mosly made by: David Barnett (https://github.com/google/vim-ft-go)
 
 syn case match
 
@@ -16,7 +16,7 @@ hi def link     umkaDeclType          Keyword
 
 " Keywords within functions
 syn keyword     umkaStatement         return break continue
-syn keyword     umkaConditional       if else switch select
+syn keyword     umkaConditional       if else switch
 syn keyword     umkaLabel             case default
 syn keyword     umkaRepeat            for in 
 
@@ -38,14 +38,11 @@ hi def link     umkaUnsignedInts      Type
 hi def link     umkaFloats            Type
 hi def link     umkaMisc              Type
 
-" Treat func specially: it's a declaration at the start of a line, but a type
-" elsewhere. Order matters here.
 syn match       umkaType              /\<fn\>/
 syn match       umkaDeclaration       /^fn\>/
 
 " Predefined functions and values
-syn keyword     umkaBuiltins          append len
-syn keyword     umkaBuiltins          make new printf
+syn keyword     umkaBuiltins          append len make new printf repr round trunc fabs sqrt sin cos atan atan2 exp log fiberspawn fibercall fiberalive
 syn keyword     umkaConstants         true false null
 
 hi def link     umkaBuiltins          Keyword
