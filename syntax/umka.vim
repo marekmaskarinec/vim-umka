@@ -2,13 +2,15 @@
 " Language:	umka
 " Maintainer: Marek Maskarinec	
 " Last Change:	2021 Feb 11
-" Mosly made by: David Barnett (https://github.com/google/vim-ft-go)
+"
+" This is just edited version of https://github.com/google/vim-ft-go.
+" Most of the credit goes to them.
 
 syn case match
 
 syn keyword     umkaDirective         import
 syn keyword     umkaDeclaration       var const type
-syn keyword     umkaDeclType          struct
+syn keyword     umkaDeclType          struct interface
 
 hi def link     umkaDirective         Statement
 hi def link     umkaDeclaration       Keyword
@@ -26,7 +28,7 @@ hi def link     umkaLabel             Label
 hi def link     umkaRepeat            Repeat
 
 " Predefined types
-syn keyword     umkaType              bool str error
+syn keyword     umkaType              bool str
 syn keyword     umkaSignedInts        int int8 int16 int32 int64 char
 syn keyword     umkaUnsignedInts      uint uint8 uint16 uint32 uint64
 syn keyword     umkaFloats            real32 real
@@ -42,7 +44,7 @@ syn match       umkaType              /\<fn\>/
 syn match       umkaDeclaration       /^fn\>/
 
 " Predefined functions and values
-syn keyword     umkaBuiltins          append len make new printf repr round trunc fabs sqrt sin cos atan atan2 exp log fiberspawn fibercall fiberalive
+syn keyword     umkaBuiltins          append len make new printf repr round trunc fabs sqrt sin cos atan atan2 exp log fiberspawn fibercall fiberalive error delete
 syn keyword     umkaConstants         true false null
 
 hi def link     umkaBuiltins          Keyword
@@ -94,12 +96,9 @@ syn region      umkaParen             start='(' end=')' transparent
 " Integers
 syn match       umkaDecimalInt        "\<\d\+\([Ee]\d\+\)\?\>"
 syn match       umkaHexadecimalInt    "\<0x\x\+\>"
-syn match       umkaOctalInt          "\<0\o\+\>"
-syn match       umkaOctalError        "\<0\o*[89]\d*\>"
 
 hi def link     umkaDecimalInt        Integer
 hi def link     umkaHexadecimalInt    Integer
-hi def link     umkaOctalInt          Integer
 hi def link     Integer             Number
 
 " Floating point
