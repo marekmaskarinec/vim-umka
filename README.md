@@ -14,7 +14,3 @@ Plug 'marekmaskarinec/vim-umka'
 ...
 call plug#end()
 ```
-
-## usage
-
-If you have the plugin installed, syntax highlighting should be automatically on, when editing umka files. You can also use `UmkaVet` to check file for errors (you need the cli umka from my fork) and `UmkaRun` you need umka cli tool for that.

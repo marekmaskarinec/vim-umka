@@ -6,10 +6,5 @@ let g:loaded_vim_umka = 01
 let s:keepcpo = &cpo
 set cpo&vim
 
-command -nargs=1 UmkaVet execute "!umka" '<args>' "-vet"
-command -nargs=1 UmkaRun execute "!umka" '<args>'
-
-setlocal cindent
-
 let &cpo = s:keepcpo
 unlet s:keepcpo
