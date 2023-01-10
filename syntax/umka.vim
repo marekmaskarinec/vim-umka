@@ -32,7 +32,7 @@ syn keyword     umkaType              bool str
 syn keyword     umkaSignedInts        int int8 int16 int32 int64 char
 syn keyword     umkaUnsignedInts      uint uint8 uint16 uint32 uint64
 syn keyword     umkaFloats            real32 real
-syn keyword     umkaMisc              fiber map
+syn keyword     umkaMisc              fiber map FiberFunc
 
 hi def link     umkaType              Type
 hi def link     umkaSignedInts        Type
@@ -44,7 +44,7 @@ syn match       umkaType              /\<fn\>/
 syn match       umkaDeclaration       /^fn\>/
 
 " Predefined functions and values
-syn keyword     umkaBuiltins          append len make new printf repr round trunc fabs sqrt sin cos atan atan2 exp log fiberspawn fibercall fiberalive error delete valid validkey
+syn keyword     umkaBuiltins          append len make new printf repr round trunc fabs sqrt sin cos atan atan2 exp log fiberspawn fibercall fiberalive error delete valid validkey keys cap sizeof sizeofself selfhasptr selftypeeq slice insert exit
 syn keyword     umkaConstants         true false null
 
 hi def link     umkaBuiltins          Keyword
