@@ -32,7 +32,7 @@ syn keyword     umkaType              bool str
 syn keyword     umkaSignedInts        int int8 int16 int32 int64 char
 syn keyword     umkaUnsignedInts      uint uint8 uint16 uint32 uint64
 syn keyword     umkaFloats            real32 real
-syn keyword     umkaMisc              fiber map FiberFunc
+syn keyword     umkaMisc              fiber map FiberFunc any
 
 hi def link     umkaType              Type
 hi def link     umkaSignedInts        Type
