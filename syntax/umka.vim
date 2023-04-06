@@ -9,7 +9,7 @@
 syn case match
 
 syn keyword     umkaDirective         import
-syn keyword     umkaDeclaration       var const type
+syn keyword     umkaDeclaration       var const type weak
 syn keyword     umkaDeclType          struct interface
 
 hi def link     umkaDirective         Statement
