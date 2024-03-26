@@ -10,7 +10,7 @@ syn case match
 
 syn keyword     umkaDirective         import
 syn keyword     umkaDeclaration       var const type
-syn keyword     umkaDeclType          struct interface
+syn keyword     umkaDeclType          struct interface enum
 
 hi def link     umkaDirective         Statement
 hi def link     umkaDeclaration       Keyword
@@ -44,7 +44,7 @@ syn match       umkaType              /\<fn\>/
 syn match       umkaDeclaration       /^fn\>/
 
 " Predefined functions and values
-syn keyword     umkaBuiltins          append len make new printf repr round trunc fabs sqrt sin cos atan atan2 exp log fiberspawn fibercall fiberalive error delete valid validkey
+syn keyword     umkaBuiltins          printf fprintf sprintf scanf fscanf sscanf round trunc ceil floor fabs sqrt sin cos atan atan2 exp log new make copy append insert delete slice len cap sizeof sizeofself selftypeeq typeptr valid validkey keys fibercall fiberalive exit
 syn keyword     umkaConstants         true false null
 
 hi def link     umkaBuiltins          Keyword
