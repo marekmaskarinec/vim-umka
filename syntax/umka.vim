@@ -10,7 +10,7 @@ syn case match
 
 syn keyword     umkaDirective         import
 syn keyword     umkaDeclaration       var const type weak
-syn keyword     umkaDeclType          struct interface
+syn keyword     umkaDeclType          struct interface enum
 
 hi def link     umkaDirective         Statement
 hi def link     umkaDeclaration       Keyword
